@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+=======
 <Project Sdk="Microsoft.NET.Sdk.Web">
+>>>>>>> ab71e25af933999c52642f7d155ce0ca029030c0
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.16">

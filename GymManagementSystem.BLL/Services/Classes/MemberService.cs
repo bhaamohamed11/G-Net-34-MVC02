@@ -1,6 +1,10 @@
 ﻿using GymManagementSystem.BLL.Services.Interfaces;
 using GymManagementSystem.BLL.ViewModels;
+<<<<<<< HEAD
+using GymManagementSystem.DAL.Data.DbContexts;
+=======
 using GymManagementSystem.DAL.DbContexts;
+>>>>>>> ab71e25af933999c52642f7d155ce0ca029030c0
 using GymManagementSystem;
 using GymManagementSystem.DAL.Repositories.Interfaces;
 using System;
@@ -121,7 +125,11 @@ namespace GymManagementSystem.BLL.Services.Classes
            return new MemberToUpdateViewModel
             {
                 Name = member.Name,
+<<<<<<< HEAD
+                Email = member .Email,
+=======
                 Email = member.Email,
+>>>>>>> ab71e25af933999c52642f7d155ce0ca029030c0
                 Phone = member.Phone,
                 Street = member.Address.Street,
                 City = member.Address.City,
@@ -134,7 +142,11 @@ namespace GymManagementSystem.BLL.Services.Classes
         {
            var member= await _MemberRepristory.GetByIdAsync(memberId, ct);
             if (member == null) return false;
+<<<<<<< HEAD
+            var HasFutureSessions=await _BookingRepristory.AnyAsync(b => b.MemberId == memberId && b.Session.StartDate > DateTime.Now, ct);
+=======
             var HasFutureSessions=await _BookingRepristory.AnyAsync(b => b.MemberId == memberId && b.Session.StartTime > DateTime.Now, ct);
+>>>>>>> ab71e25af933999c52642f7d155ce0ca029030c0
             if (HasFutureSessions) return false;
             var result= await _MemberRepristory.DeleteAsync(member);
             return result > 0;
