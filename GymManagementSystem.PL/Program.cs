@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using GymManagementSystem.BLL;
 using GymManagementSystem.BLL.Services.Classes;
 using GymManagementSystem.BLL.Services.Interfaces;
@@ -5,6 +6,13 @@ using GymManagementSystem.DAL.Data.DbContexts;
 using GymManagementSystem.DAL.Repositories.Classes;
 using GymManagementSystem.DAL.Repositories.Interfaces;
 using GymManagementSystem.PL;
+=======
+using GymManagementSystem.BLL.Services.Classes;
+using GymManagementSystem.BLL.Services.Interfaces;
+using GymManagementSystem.DAL.DbContexts;
+using GymManagementSystem.DAL.Repositories.Classes;
+using GymManagementSystem.DAL.Repositories.Interfaces;
+>>>>>>> ab71e25af933999c52642f7d155ce0ca029030c0
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +27,7 @@ builder.Services.AddScoped<IPlanService, PlanService>();
 builder.Services.AddScoped<ITrainerService, TrainerService>();
 builder.Services.AddScoped<IMemberService, MemberService>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+<<<<<<< HEAD
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ISessionRepository, SessionRepository>();
 builder.Services.AddAutoMapper(m => m.AddProfile(new MappingProfiles()));
@@ -28,6 +37,12 @@ builder.Services.AddScoped<IAnalyticsServices, AnalyticsServices>();
 #endregion
 var app = builder.Build();
 await app.MigrateAndDataAsync();
+=======
+
+//builder.Services.AddScoped<IPlanRepository, PlanRepository>();
+#endregion
+var app = builder.Build();
+>>>>>>> ab71e25af933999c52642f7d155ce0ca029030c0
 
 
 // Configure the HTTP request pipeline.

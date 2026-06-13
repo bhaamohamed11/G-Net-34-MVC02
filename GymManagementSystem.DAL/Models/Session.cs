@@ -10,8 +10,13 @@ namespace GymManagementSystem.DAL.Models
     {
         public string Description { get; set; } = null!;
         public int Capsity { get; set; }
+<<<<<<< HEAD
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+=======
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+>>>>>>> ab71e25af933999c52642f7d155ce0ca029030c0
         public ICollection<Booking> SessionMembers { get; set; } = null!;
         public int TrainerId { get; set; }
         public Trainer Trainer { get; set; } = null!;
