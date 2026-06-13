@@ -1,5 +1,5 @@
-﻿using GymManagementSystem.DAL.Data.DataSeeding;
-using GymManagementSystem.DAL.Data.DbContexts;
+﻿using GymManagementSystem.DAL.Data.DbContexts;
+using GymManagementSystem.DAL.Data.DataSeeding;
 using Microsoft.EntityFrameworkCore;
 
 namespace GymManagementSystem.PL
