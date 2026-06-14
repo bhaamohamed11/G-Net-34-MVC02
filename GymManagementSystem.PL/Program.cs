@@ -25,6 +25,8 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ISessionRepository, SessionRepository>();
 builder.Services.AddAutoMapper(m => m.AddProfile(new MappingProfiles()));
 builder.Services.AddScoped<ISessionService, SessionService>();
+builder.Services.AddScoped<IMemberService, MemberService>();
+
 builder.Services.AddScoped<IAnalyticsServices, AnalyticsServices>();
 //builder.Services.AddScoped<IPlanRepository, PlanRepository>();
 #endregion

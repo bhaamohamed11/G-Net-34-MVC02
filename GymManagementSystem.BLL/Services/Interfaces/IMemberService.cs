@@ -1,4 +1,5 @@
-﻿using GymManagementSystem.BLL.ViewModels;
+﻿using GymManagementSystem.BLL.Common;
+using GymManagementSystem.BLL.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace GymManagementSystem.BLL.Services.Interfaces
     {
         Task<IEnumerable<MemberViewModel>> GetAllMembersAsync(CancellationToken ct = default);
         Task<MemberViewModel?> GetMemberDetailsAsync(int memberId, CancellationToken ct = default);
-        Task<bool> CreateMemberAsync(CreateMemberViewModel model, CancellationToken ct = default);
+        Task<Result> CreateMemberAsync(CreateMemberViewModel model, CancellationToken ct = default);
         Task<MemberToUpdateViewModel?> GetMemberToUpdateAsync(int memberId, CancellationToken ct = default);
 
          Task<bool> UpdateMemberDetailsAsync(int memberId, MemberToUpdateViewModel model, CancellationToken ct = default);
