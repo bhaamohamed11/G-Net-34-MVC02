@@ -1,15 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <Compile Remove="Services\Attatdhment\**" />
+    <EmbeddedResource Remove="Services\Attatdhment\**" />
+    <None Remove="Services\Attatdhment\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="16.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.3.11" />
   </ItemGroup>
 
   <ItemGroup>
 
     <ProjectReference Include="..\GymManagementSystem.DAL\GymManagementSystem.DAL.csproj" />
   </ItemGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
 
-  <PropertyGroup>
+
+	<PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
