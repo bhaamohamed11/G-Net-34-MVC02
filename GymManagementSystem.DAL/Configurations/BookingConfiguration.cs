@@ -27,7 +27,7 @@ namespace GymManagementSystem.DAL.Configurations
                 .WithMany(c => c.MemberSessions)
                 .HasForeignKey(x => x.MemberId);
 
-            builder.HasIndex(x => new { x.MemberId, x.SessionId });
+            builder.HasKey(x => new { x.MemberId, x.SessionId });
 
             #endregion
 
