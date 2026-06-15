@@ -1,8 +1,10 @@
 ﻿using GymManagementSystem.BLL.Services.Interfaces;
 using GymManagementSystem.BLL.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 namespace GymManagementSystem.PL.Controllers
 {
+    [Authorize(Roles ="SuperAdmin")]
     public class MembersController : Controller
     {
         private readonly IMemberService _memberService;
@@ -29,7 +31,7 @@ namespace GymManagementSystem.PL.Controllers
 
 
             var result = await _memberService.CreateMemberAsync(model, ct);
-            if (result)
+            if (result.Success)
             {
                 TempData["SuccessMessage"] = "Member created successfully!";
             }
